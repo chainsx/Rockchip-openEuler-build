@@ -52,3 +52,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           release_id: ${{ needs.prepare_release.outputs.release_id }}
+      - name: Clean
+        shell: bash
+        run: |
+          sudo rm -rf rockchip
